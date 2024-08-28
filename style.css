@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+nav {
+  height: 4.5rem;
+  width: 100%;
+  display: flex;
+}
+
+ .link {
+  width: 60%;
+} 
+
+nav ul {
+  display: flex;
+  padding-top: 1.2rem;
+  gap: 1.5rem;
+  justify-content: center;
+
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  color: #2E2E2E;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 24px;
+ 
+}
+
+.logo img {
+  padding-top: 1rem;
+  padding-left: 4rem;
+}
+
+.login {
+  width: 20%;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.login Button {
+  background-color: rgb(224, 14, 14);
+  color: #fff;
+  border: none;
+  width: 4rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #fff;
+  background: black;
+}
+
+nav .menu-btn i {
+  color: black;
+  padding-top: 1rem;
+  padding-left: 18rem;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  transition: color 0.3s ease;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: -1;
+  transition: color 0.3s ease;
+  margin: 5rem auto;
+}
+
+.container .left h1 {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 5rem;
+  color: #000000;
+}
+
+.para {
+  color: #5A5959;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding-top: 1.6rem;
+}
+
+.Available {
+  font-family: "Inter", sans-serif;
+  color: #5A5959;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding-top: 1.4rem;
+}
+
+.button {
+  width: max-content;
+  gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.4rem;
+}
+
+.shop {
+  width: 6.7rem;
+  height: 2rem;
+  font-size: 1rem;
+  border: none;
+  font-family: "Inter", sans-serif;
+  line-height: 2rem;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #D01C28;
+  font-weight: 600;
+}
+
+.Category {
+  width: 6.7rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #000000;
+  color: #5A5959;
+  background-color: #FFFFFF;
+  font-weight: 600;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.left .icon {
+  width: 131px;
+  height: 67px;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.left .Available {
+  color: #5A5959;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.right img {
+  width: 33rem;
+  height: 30rem;
+}
+
+/* =======================Media============================  */
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+
+.open-menu,
+.close-menu {
+    display: block;
+}
+
+@media (max-width: 924px) {
+  nav .menu-btn i {
+    display: block;
+
+  }
+
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+    /* FontAwesome X icon  */
+
+  }
+
+  .login Button {
+    display: none;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease;
+  }
+
+  .menu-btn:checked~ul {
+    left: 0;
+
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 20px 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  .menu-btn:checked~ul li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  nav ul li a {
+    width: 100%;
+    margin-left: 0;
+    display: block;
+    font-size: 20px;
+    color: rgb(8, 7, 7);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+ 
+}
+@media (max-width: 1025px) {
+  .logo img {
+  display: block;
+  padding-left: 1rem;
+  }
+}
